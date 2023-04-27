@@ -1,5 +1,3 @@
-/* eslint-disable eol-last */
-/* eslint-disable semi */
-const books = [];
+const books = []
 
-module.exports = books;
+module.exports = books

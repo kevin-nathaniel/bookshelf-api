@@ -1,25 +1,23 @@
-/* eslint-disable eol-last */
 /* eslint-disable comma-dangle */
-/* eslint-disable semi */
-const Hapi = require('@hapi/hapi');
-const routes = require('./routes')
+/* eslint-disable quotes */
+const Hapi = require("@hapi/hapi")
+const routes = require("./routes")
 
 const init = async () => {
   const server = Hapi.server({
     port: 9000,
-    host: 'localhost',
+    host: "localhost",
     routes: {
       cors: {
-        origin: ['*']
-      }
-    }
-  });
+        origin: ["*"],
+      },
+    },
+  })
 
-  // eslint-disable-next-line no-undef
-  server.route(routes);
+  server.route(routes)
 
-  await server.start();
-  console.log(`Server berjalan pada ${server.info.uri}`);
+  await server.start()
+  console.log(`Server berjalan pada ${server.info.uri}`)
 }
 
-init();
+init()
